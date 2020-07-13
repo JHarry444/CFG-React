@@ -1,24 +1,20 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import ChildComponent from './ChildComponent';
 
 function App() {
+  let i = 42;
+
+  const clickHandler = function (arg1) {
+    // alert("i: " + i++);
+    console.log(arg1);
+  }
+
+  const msg = "Hello, World!"
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <ChildComponent message={msg} bloop="dawoop" click={() => {clickHandler("shoop")}}/>
+      <ChildComponent message="Goodbye world" click={clickHandler("dawoop")}/>
     </div>
   );
 }
