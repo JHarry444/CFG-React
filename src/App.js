@@ -1,15 +1,13 @@
 import React from 'react';
 import './App.css';
-import Counter from './Counter';
-import CounterFunc from './CounterFunc';
+import LiftingState from './LiftingState';
 
 function App() {
 
 
   return (
     <div>
-      <Counter/>
-      <CounterFunc/>
+      <LiftingState/>
     </div>
   );
 }
