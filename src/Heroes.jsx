@@ -39,7 +39,7 @@ export default class Heroes extends React.Component {
                 <h1>{this.state.heroes.squadName}</h1>
                 <Search handleChange={this.handleChange} handleSubmit={this.handleSubmit} search={this.state.search} />
                 <div>
-                    {this.state.heroes.members.map((hero, index) => <Hero key={index} {...hero}/>)}
+                    {this.state.heroes.members.map((hero, index) => <Hero history={this.props.history} key={index} {...hero}/>)}
                 </div>
             </div>
         );
