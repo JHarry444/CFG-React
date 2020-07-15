@@ -1,17 +1,12 @@
 import React from 'react';
 import './App.css';
-import { BrowserRouter as Router, Route, Switch, BrowserRouter } from 'react-router-dom';
-import FuncForm from './FuncForm';
-import Routing from './Routing';
+// import { BrowserRouter as Router, Route, Switch, BrowserRouter } from 'react-router-dom';
+import Heroes from './Heroes';
+
 
 function App() {
   return (
-    <Router>
-      <Switch>
-        <Route path="/" exact component={Routing} />
-        <Route path="/weapon" component={FuncForm} />
-      </Switch>
-    </Router>
+    <Heroes/>
   );
 }
 
